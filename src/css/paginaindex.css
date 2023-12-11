@@ -1,0 +1,36 @@
+
+/* Estilizando o contêiner principal onde os cards dos Pokémon
+serão exibidos */
+#pokemon-list {
+    display: flex;          /* Utilizando o modelo de layout flexível
+para o contêiner */
+    flex-wrap: wrap;        /* Permitindo que os cards envolvam para a
+próxima linha se não houver espaço suficiente */
+    justify-content: center; /* Centralizando horizontalmente os cards
+dentro do contêiner */
+    align-items: center;     /* Centralizando verticalmente os cards
+dentro do contêiner */
+}
+
+/* Estilizando o card individual de cada Pokémon */
+.pokemon-card {
+    border: 1px solid #ddd;   /* Adicionando uma borda de 1 pixel
+sólida com uma cor cinza claro */
+    padding: 10px;            /* Adicionando um preenchimento interno
+de 10 pixels para o card */
+    margin: 10px;             /* Adicionando uma margem externa de 10
+pixels ao redor do card */
+    width: 200px;             /* Definindo a largura do card como 200 pixels */
+    text-align: center;       /* Centralizando o texto dentro do card */
+    background-color: white; /* Definindo uma cor de fundo para o card */
+}
+
+
+
+/* Estilizando a imagem do Pokémon dentro do card */
+.pokemon-image {
+    max-width: 100px;         /* Definindo a largura máxima da imagem
+como 100 pixels */
+    max-height: 100px;        /* Definindo a altura máxima da imagem
+como 100 pixels */
+}
