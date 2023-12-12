@@ -34,3 +34,38 @@ como 100 pixels */
     max-height: 100px;        /* Definindo a altura máxima da imagem
 como 100 pixels */
 }
+
+/*Colocar a imagem de fundo na pagina toda*/
+body {
+    background-image: url("/img/background01.jpg");
+}
+
+/*Titulo da página Pokedex*/
+.title {
+    background-color: black;
+    text-align: center;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Div que engloba o Input com o botão buscar*/
+.div-search {
+    margin-top: 15px;
+}
+
+/*Estlização do botão buscar*/
+.btn {
+    color: antiquewhite;
+    margin-right: 10vh;
+    width: 25vh;
+}
+
+/*Estilização do campo Input*/
+input {
+    margin-right: 15vh;
+    margin-left: 10vh;
+}
+
+.form-control {
+    border-radius: 15px;
+}
