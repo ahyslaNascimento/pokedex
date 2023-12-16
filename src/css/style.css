@@ -1,4 +1,15 @@
-body{
-    width: 100%;
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: greenyellow;
+}
+/*Colocar a imagem de fundo na pagina toda*/
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/src/img/background01.jpg");
+    background-size: 100% 100%;  /* Ajustado para cobrir 100% da largura e altura */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     height: 100vh;
 }
