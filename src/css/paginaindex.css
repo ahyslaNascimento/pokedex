@@ -192,6 +192,13 @@ dentro do contêiner */
   width: 60%; /* Ajusta a largura da imagem para ocupar 100% do contêiner */
   height: 60%; /* Ajusta a altura da imagem para ocupar 100% do contêiner */
 }
+
+/*Colocar a imagem de fundo na pagina toda*/
+body {
+  background-image: url("../img/background01.jpg");
+}
+
+
 /*Titulo da página Pokedex*/
 .title {
   background-color: black;
