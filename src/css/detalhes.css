@@ -1,32 +1,78 @@
 #detalhes-container {
-    max-width: 400px;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    /*  max-width: 400px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-   }
+    text-align: center; */
+}
 
-#pokemon-name{
-    font-size: 40px;
-    color: #333;
+.pokename-container {
+    height: 34vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    /*  //justify-content: center;
+    //align-itens: center; */
+}
+
+.pokeimage-container {
+    height: 30vh;
+}
+
+#pokemon-details {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.pokedetails-column {
+    width: 300px;
+}
+
+.voltar {
+    width: 33vw;
+    font-size: 25px;
+    color: black;
+    padding-top: 20px;
+}
+
+#pokemon-name {
+    flex-grow: 1;
+    font-size: 60px;
+    color: white;
     text-transform: capitalize;
 
 }
 
+.vazio {
+    width: 33vw;
+}
+
+
 #pokemon-image {
     max-width: 100%;
-    height: auto;
+    height: 230px;
     margin-top: 10px;
     border-radius: 5px;
 }
 
 #pokemon-details p {
     margin: 10px 0;
-    font-size: 16px;
-    color: #555;
+    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 #pokemon-abilities,
@@ -35,3 +81,33 @@
     font-size: 18px;
     color: #777;
 }
+
+.pokedetails-column span {
+    padding: 0 5px;
+}
+
+
+@media (max-width: 600px) {
+    .voltar {
+        width: 33vw;
+        font-size: 22px;
+        color: black;
+        padding-top: 20px;
+    }
+
+    #pokemon-name {
+        padding-top: 60px;
+        height: 100%;
+        flex-grow: 1;
+        font-size: 40px;
+        color: white;
+        text-transform: capitalize;
+    }
+}
+
+/* .btn-details {
+    background-color: rgb(204, 24, 17);
+    font-size: 3vh;
+    width: 25vh;
+    color: black;
+} */

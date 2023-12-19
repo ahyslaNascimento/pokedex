@@ -30,15 +30,15 @@ async function displayPokemonDetails() {
 
         document.getElementById('pokemon-name').textContent = detailsData.name;
         document.getElementById('pokemon-image').src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
-        document.getElementById('pokemon-weight').textContent = `Peso: ${detailsData.weight / 10}kg`;
-        document.getElementById('pokemon-height').textContent = `Altura: ${detailsData.height / 10}m`;
-        document.getElementById('pokemon-strength').textContent = `Força do Pokémon: --`;
-        document.getElementById('pokemon-hp').textContent = `Vida: ${detailsData.stats[0].base_stat}`;
-        document.getElementById('pokemon-attack').textContent = `Ataque: ${detailsData.stats[1].base_stat}`;
-        document.getElementById('pokemon-defense').textContent = `Defesa: ${detailsData.stats[2].base_stat}`;
-        document.getElementById('pokemon-special-attack').textContent = `Ataque SP: ${detailsData.stats[3].base_stat}`;
-        document.getElementById('pokemon-special-defense').textContent = `Defesa SP: ${detailsData.stats[4].base_stat}`;
-        document.getElementById('pokemon-speed').textContent = `Velocidade: ${detailsData.stats[5].base_stat}`;
+        document.getElementById('pokemon-weight').textContent = ` ${detailsData.weight / 10}kg`;
+        document.getElementById('pokemon-height').textContent = `${detailsData.height / 10}m`;
+        /*document.getElementById('pokemon-strength').textContent = `Força do Pokémon: --`;  */
+        document.getElementById('pokemon-hp').textContent = ` ${detailsData.stats[0].base_stat}`;
+        document.getElementById('pokemon-attack').textContent = `${detailsData.stats[1].base_stat}`;
+        document.getElementById('pokemon-defense').textContent = `${detailsData.stats[2].base_stat}`;
+        document.getElementById('pokemon-special-attack').textContent = ` ${detailsData.stats[3].base_stat}`;
+        document.getElementById('pokemon-special-defense').textContent = ` ${detailsData.stats[4].base_stat}`;
+        document.getElementById('pokemon-speed').textContent = `${detailsData.stats[5].base_stat}`;
     } catch (error) {
         console.error('Erro ao buscar detalhes do Pokémon:', error);
     }

@@ -1,16 +1,21 @@
 /* Estilizando o contêiner principal onde os cards dos Pokémon
 serão exibidos */
 #pokemon-list {
-  display: flex; /* Utilizando o modelo de layout flexível
+  display: flex;
+  /* Utilizando o modelo de layout flexível
 para o contêiner */
-  flex-wrap: wrap; /* Permitindo que os cards envolvam para a
+  flex-wrap: wrap;
+  /* Permitindo que os cards envolvam para a
 próxima linha se não houver espaço suficiente */
-  justify-content: center; /* Centralizando horizontalmente os cards
+  justify-content: center;
+  /* Centralizando horizontalmente os cards
 dentro do contêiner */
-  align-items: center; /* Centralizando verticalmente os cards
+  align-items: center;
+  /* Centralizando verticalmente os cards
 dentro do contêiner */
   margin-top: 3%;
 }
+
 /* Estilizando o card individual de cada Pokémon */
 .pokemon-card {
   border: 6px solid darkred;
@@ -26,7 +31,8 @@ dentro do contêiner */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-position: center center; /* Centraliza a imagem de fundo nos eixos X e Y */
+  background-position: center center;
+  /* Centraliza a imagem de fundo nos eixos X e Y */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,10 +51,13 @@ dentro do contêiner */
   z-index: 1;
   opacity: 0.7;
 }
+
 /* Efeito de zoom quando o mouse está sobre o card do Pokémon */
 .pokemon-card:hover {
-  transform: scale(1.1); /* Ajuste o valor conforme necessário para o efeito desejado */
-  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito */
+  transform: scale(1.1);
+  /* Ajuste o valor conforme necessário para o efeito desejado */
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave para o efeito */
 }
 
 
@@ -65,12 +74,14 @@ dentro do contêiner */
   height: 250px;
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave para o efeito de zoom */
 }
 
 /* Efeito de zoom direto na imagem quando o mouse está sobre o card do Pokémon */
 .pokemon-card:hover .pokemon-image {
-  transform: scale(1.1); /* Ajuste o valor conforme necessário para o efeito desejado */
+  transform: scale(1.1);
+  /* Ajuste o valor conforme necessário para o efeito desejado */
 }
 
 
@@ -78,20 +89,25 @@ dentro do contêiner */
 #load-more {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #f44336; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto do botão */
+  background-color: #f44336;
+  /* Cor de fundo do botão */
+  color: #fff;
+  /* Cor do texto do botão */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin: 0 auto; /* Centralizar na horizontal */
+  margin: 0 auto;
+  /* Centralizar na horizontal */
 }
 
 #load-more .pokeball-icon {
-  width: 20px; /* Ajuste a largura do ícone conforme necessário */
+  width: 20px;
+  /* Ajuste a largura do ícone conforme necessário */
   height: auto;
-  margin-right: 30px; /* Espaçamento entre o ícone e o texto */
+  margin-right: 30px;
+  /* Espaçamento entre o ícone e o texto */
 }
 
 /* Centralizar o contêiner principal na página */
@@ -129,13 +145,17 @@ dentro do contêiner */
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .pokemon-card.type-flying {
   background-image: url("https://img.freepik.com/vetores-premium/ceu-azul-com-nuvens-fundo-elegante_778914-173.jpg");
-  background-position: center; /* Centraliza a imagem de fundo */
+  background-position: center;
+  /* Centraliza a imagem de fundo */
 }
+
 .pokemon-card.type-fighting {
   background-image: url("https://img.freepik.com/vetores-premium/fundo-de-desenho-animado-em-quadrinhos-versus-luta_530597-712.jpg")
 }
+
 .pokemon-card.type-poison {
   background-image: url("https://deepdreamgenerator.com/storage/fast_queue/temp_images/03428aa5a0cad4d9d50f9e3176c328d6756fb331.jpg");
 }
@@ -143,36 +163,45 @@ dentro do contêiner */
 .pokemon-card.type-ground {
   background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/24054400-terra-textura-solo-topo-visao-dentro-desenho-animado-estilo-com-pedras-e-textura-desatado-jogos-interface-fundo-castanho-terra-ilustracao-vetor.jpg");
 }
+
 .pokemon-card.type-rock {
   background-image: url("https://img.freepik.com/vetores-gratis/uma-parede-de-pedra_1308-5911.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .pokemon-card.type-ice {
   background-image: url("https://img.freepik.com/vetores-gratis/fundo-do-inverno-com-uma-textura-de-gelo_1048-4071.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .pokemon-card.type-bug {
   background-image: url("https://deepdreamgenerator.com/storage/fast_queue/temp_images/cf01d53871c0b3aaf56e90788b51a89ea29d4127.jpg  ");
 }
+
 .pokemon-card.type-ghost {
   background-image: url("https://st4.depositphotos.com/2617209/19791/v/450/depositphotos_197919700-stock-illustration-cartoon-halloween-happy-ghost-character.jpg");
 }
+
 .pokemon-card.type-steel {
   background-image: url("https://img.freepik.com/vetores-premium/aco-fundo-de-vetor-de-ferro_42077-5013.jpg");
-  
+
 }
+
 .pokemon-card.type-dragon {
   background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/7743230-desenho-de-dragao-ocidental-com-asas-e-chifre-fundo-preto-arrastar-o-sol-no-fundo-vetor.jpg");
 }
+
 .pokemon-card.type-dark {
   background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20220915/pngtree-dark-horror-character-drawing-background-dark-photography-photo-image_48720244.jpg");
 }
+
 .pokemon-card.type-fairy {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxyC5rtYxWbf9WQ-rBWliVpqCoUSDlwnGOXQ&usqp=CAU");
 }
-.pokemon-card.type-normal{
+
+.pokemon-card.type-normal {
   background-image: url("https://1.bp.blogspot.com/--f7Jcmtmv0Q/YFqMvVdzBRI/AAAAAAAARo8/z-QQS6M3Lvwfnb1uMH2dRSWGIWhiozAXACLcBGAsYHQ/w1600/capa-normal.png");
 }
 
@@ -188,16 +217,18 @@ dentro do contêiner */
   transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   z-index: 2;
 }
+
 .pokeball-overlay img {
-  width: 60%; /* Ajusta a largura da imagem para ocupar 100% do contêiner */
-  height: 60%; /* Ajusta a altura da imagem para ocupar 100% do contêiner */
+  width: 60%;
+  /* Ajusta a largura da imagem para ocupar 100% do contêiner */
+  height: 60%;
+  /* Ajusta a altura da imagem para ocupar 100% do contêiner */
 }
 
 /*Colocar a imagem de fundo na pagina toda*/
 body {
-  background-image: url("../img/background01.jpg");
+  background-image: url("https://getwallpapers.com/wallpaper/full/9/e/c/390294.jpg");
 }
-
 
 /*Titulo da página Pokedex*/
 .title {
@@ -213,10 +244,10 @@ body {
 }
 
 /*Estlização do botão buscar*/
-.btn {
-  color: antiquewhite;
-  margin-right: 10vh;
-  width: 25vh;
+.btn { 
+    color: red;
+    margin-right: 10vh;
+    width: 25vh;  
 }
 
 /*Estilização do campo Input*/
