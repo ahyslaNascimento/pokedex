@@ -32,7 +32,7 @@ async function displayPokemonDetails() {
         document.getElementById('pokemon-image').src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
         document.getElementById('pokemon-weight').textContent = ` ${detailsData.weight / 10}kg`;
         document.getElementById('pokemon-height').textContent = `${detailsData.height / 10}m`;
-        /*document.getElementById('pokemon-strength').textContent = `Força do Pokémon: --`;  */
+        document.getElementById('pokemon-strength').textContent = `${detailsData.base_experience}`;
         document.getElementById('pokemon-hp').textContent = ` ${detailsData.stats[0].base_stat}`;
         document.getElementById('pokemon-attack').textContent = `${detailsData.stats[1].base_stat}`;
         document.getElementById('pokemon-defense').textContent = `${detailsData.stats[2].base_stat}`;

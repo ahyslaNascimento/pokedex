@@ -1,66 +1,64 @@
-// Definindo a URL da API para buscar os Pokémon
-const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit"; // Inicialmente, limitamos a 20
-const totalPokemon = 1080; // Total de Pokémon que você deseja carregar
-let offset = 20; // Inicializamos o offset para carregar os próximos 20
 
+// Definindo a URL da API para buscar os Pokémon
+const apiUrl = "https://pokeapi.co/api/v2/pokemon";
+
+// Inicializa o offset para carregar os primeiros 20 Pokémon
+let offset = 0;
 
 // Array para armazenar os Pokémon já carregados
 let loadedPokemon = [];
-// ...
 
 // Adiciona um ouvinte de clique ao botão "Load More"
 document.getElementById("load-more").addEventListener("click", () => {
   // Atualiza o offset para a próxima busca
   offset += 20;
 
-  // Chama a função para buscar a lista de Pokémon
-  fetchPokemonList();
+  // Chama a função para buscar e exibir a lista de Pokémon
+  fetchAndDisplayPokemonList();
 });
 
-// ...
-
-async function fetchPokemonList() {
-  // Se já carregamos todos os Pokémon, exibimos um alerta e interrompemos a execução
-  if (offset >= totalPokemon) {
-    alert("Todos os Pokémon foram carregados!");
-    return;
-  }
-
+// Função para buscar e exibir a lista de Pokémon
+async function fetchAndDisplayPokemonList() {
   try {
     // Faz uma solicitação para a API usando a URL composta com base no offset atual
-    const response = await fetch(`${apiUrl}&offset=${offset}`);
+    const response = await fetch(`${apiUrl}?limit=20&offset=${offset}`);
     const data = await response.json();
 
-    // Cria um array de promises para as solicitações detalhadas de cada Pokémon
-    const pokemonPromises = data.results.map((pokemon) =>
-      fetch(pokemon.url).then((response) => response.json())
-    );
+    // Cria um array para armazenar os detalhes dos novos Pokémon
+    const newPokemonDetails = [];
 
-    // Aguarda que todas as promises sejam resolvidas
-    const detailedPokemonData = await Promise.all(pokemonPromises);
+    // Itera sobre os resultados da API e obtém os detalhes de cada Pokémon
+    for (const result of data.results) {
+      const pokemonDetailResponse = await fetch(result.url);
+      const pokemonDetail = await pokemonDetailResponse.json();
+      newPokemonDetails.push(pokemonDetail);
+    }
 
     // Filtra os Pokémon já carregados
-    const newPokemon = detailedPokemonData.filter(
+    const newPokemon = newPokemonDetails.filter(
       (pokemon) => !loadedPokemon.includes(pokemon.id)
     );
 
     // Adiciona os novos Pokémon ao array de Pokémon carregados
     loadedPokemon = loadedPokemon.concat(newPokemon);
 
+    // Ordena todos os Pokémon por ID
+    loadedPokemon.sort((a, b) => a.id - b.id);
+
     // Chama a função para exibir a lista de Pokémon
-    displayPokemonList(newPokemon);
+    displayPokemonList(loadedPokemon);
   } catch (error) {
-    console.error("Erro ao buscar lista de Pokémon:", error);
+    console.error("Erro ao buscar e exibir a lista de Pokémon:", error);
   }
 }
-
-// ...
-
 
 // Função para exibir a lista de Pokémon
 function displayPokemonList(pokemonList) {
   // Obtém o contêiner onde os cards dos Pokémon serão exibidos
   const pokemonContainer = document.getElementById("pokemon-list");
+
+  // Limpa o contêiner antes de adicionar os novos cards
+  pokemonContainer.innerHTML = "";
 
   // Itera sobre a lista de Pokémon e chama a função para criar os cards
   pokemonList.forEach((pokemonData) => {
@@ -69,17 +67,18 @@ function displayPokemonList(pokemonList) {
   });
 }
 
-// ...
-
-// ...
-
 // Função para criar o card de um Pokémon
 function createPokemonCard(pokemonData) {
   // Obtém o contêiner onde os cards dos Pokémon serão exibidos
   const pokemonContainer = document.getElementById("pokemon-list");
 
   // Verifica se os dados do Pokémon são válidos
-  if (!pokemonData || !pokemonData.id || !pokemonData.name || !pokemonData.types) {
+  if (
+    !pokemonData ||
+    !pokemonData.id ||
+    !pokemonData.name ||
+    !pokemonData.types
+  ) {
     console.error("Dados inválidos do Pokémon:", pokemonData);
     return;
   }
@@ -91,12 +90,10 @@ function createPokemonCard(pokemonData) {
   // Monta o conteúdo do card com base nos dados do Pokémon
   const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id}.png`;
   card.innerHTML = `
-    <div class="pokeball-overlay">
-      <img src="src/img/fundocard.png" alt="pokeball">
-    </div>
-    <h3 class="pokemon-name">${pokemonData.name}</h3>
-    <img class="pokemon-image" src="${imageUrl}" alt="${pokemonData.name}">
-  `;
+      <div class="pokeball-overlay"></div>
+      <h3 class="pokemon-name">#${pokemonData.id} ${pokemonData.name}</h3>
+      <img class="pokemon-image" src="${imageUrl}" alt="${pokemonData.name}">
+    `;
 
   // Adiciona classes ao card com base nos tipos do Pokémon
   const pokemonTypes = pokemonData.types.map((type) => type.type.name);
@@ -113,7 +110,6 @@ function createPokemonCard(pokemonData) {
   pokemonContainer.appendChild(card);
 }
 
-
-
-// Chama a função para buscar a lista de Pokémon quando a página carregar
-fetchPokemonList();
+// Chama a função para buscar e exibir a lista de Pokémon quando a página carregar
+fetchAndDisplayPokemonList();
+("");

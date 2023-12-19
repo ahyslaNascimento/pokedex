@@ -18,7 +18,7 @@ dentro do contêiner */
 
 /* Estilizando o card individual de cada Pokémon */
 .pokemon-card {
-  border: 6px solid darkred;
+  border: 6px;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -157,7 +157,7 @@ dentro do contêiner */
 }
 
 .pokemon-card.type-poison {
-  background-image: url("https://deepdreamgenerator.com/storage/fast_queue/temp_images/03428aa5a0cad4d9d50f9e3176c328d6756fb331.jpg");
+  background-image: url("/src/img/ie0pyp_baec903c0e74a345af260970dce01393b52aa462.jpg");
 }
 
 .pokemon-card.type-ground {
@@ -202,7 +202,7 @@ dentro do contêiner */
 }
 
 .pokemon-card.type-normal {
-  background-image: url("https://1.bp.blogspot.com/--f7Jcmtmv0Q/YFqMvVdzBRI/AAAAAAAARo8/z-QQS6M3Lvwfnb1uMH2dRSWGIWhiozAXACLcBGAsYHQ/w1600/capa-normal.png");
+  background-image: url("/src/img/pokemonnormal.png");
 }
 
 /* Adicione mais classes e estilos conforme necessário */
