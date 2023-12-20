@@ -227,7 +227,7 @@ dentro do contêiner */
 
 /*Colocar a imagem de fundo na pagina toda*/
 body {
-  background-image: url("https://getwallpapers.com/wallpaper/full/9/e/c/390294.jpg");
+  background-image: url("/src/img/fundobody2.jpg");
 }
 
 /*Titulo da página Pokedex*/
@@ -258,4 +258,101 @@ input {
 
 .form-control {
   border-radius: 15px;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 300vh;
+}
+
+.pokebola {
+  position: absolute;
+  top: 42%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  box-shadow: inset -10px 10px 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: gira 3s linear infinite; /* Ajuste a velocidade e a duração conforme necessário */
+}
+
+.pokebola:before,
+.pokebola:after {
+  content: "";
+  position: absolute;
+}
+
+.pokebola:before {
+  background-color: #ef4036;
+  width: 100%;
+  height: 50%;
+}
+
+.pokebola:after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background-color: #000;
+}
+
+.botao {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.botao:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+}
+@keyframes gira {
+  0% {
+    transform: rotate(-400deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(720deg) scale(0);
+    opacity: 0;
+  }
+}
+
+.pokebola {
+ animation: gira 2s ease-out forwards;
+}
+/* Adicione um estilo para desabilitar a rolagem quando a classe 'scroll-disabled' estiver presente */
+.scroll-disabled {
+  overflow: hidden;
 }

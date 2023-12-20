@@ -24,30 +24,40 @@
             </div>
         </div>
     </header>
-    <main>
-        <!-- Estrutura principal da página -->
-        <main>
-            <!-- O elemento <main> representa o conteúdo principal da página -->
+       <!-- Estrutura principal da página -->
+<main class="scroll-disabled">
+    <!-- Tela de Loading -->
+    <div class="loader-wrapper">
+        <div class="pokebola">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="botao"></div>
+            <div class="botao-reflexo"></div>
+        </div>
+    </div>
 
-            <div id="pokemon-container">
-                <!-- Um contêiner principal para agrupar os elementos relacionados aos Pokémon -->
+    <div id="pokemon-container">
+        <!-- Um contêiner principal para agrupar os elementos relacionados aos Pokémon -->
 
-                <div id="pokemon-list">
-                    <!-- Uma área onde os cards dos Pokémon serão exibidos -->
-                </div>
-
-                <button id="load-more">
-                    <!-- Um botão para carregar mais Pokémon -->
-                    <span class="pokeball-icon">
-                        <!-- Um ícone de Pokébola para decorar o botão -->
-                        <img src="./src/img/iconebotao.png" alt="Pokébola">
-                    </span>
-                    Capture mais Pokémons
-                </button>
+        <div class="pokebola-center">
+            <div id="pokemon-list">
+                <!-- Uma área onde os cards dos Pokémon serão exibidos -->
             </div>
-            <section id="list-search"></section>
+        </div>
 
-        </main>
+        <button id="load-more">
+            <!-- Um botão para carregar mais Pokémon -->
+            <span class="pokeball-icon">
+                <!-- Um ícone de Pokébola para decorar o botão -->
+                <img src="./src/img/iconebotao.png" alt="Pokébola">
+            </span>
+            Capture mais Pokémons
+        </button>
+    </div>
+
+    <section id="list-search"></section>
+</main>
+
         <script src="src/js/script.js"></script> <!-- Link para o arquivo JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

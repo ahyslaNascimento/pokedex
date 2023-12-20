@@ -113,3 +113,28 @@ function createPokemonCard(pokemonData) {
 // Chama a função para buscar e exibir a lista de Pokémon quando a página carregar
 fetchAndDisplayPokemonList();
 ("");
+
+document.addEventListener("DOMContentLoaded", function () {
+  var loaderWrapper = document.querySelector(".loader-wrapper");
+  var content = document.querySelector("#pokemon-container");
+
+  // Mostra a tela de loading
+  loaderWrapper.style.display = "block";
+  // Desabilita o scroll enquanto a tela de loading estiver visível
+  document.body.classList.add('scroll-disabled');
+
+  // Simula um carregamento assíncrono, substitua isso pelo seu carregamento real de dados
+  setTimeout(function () {
+      // Esconde a tela de loading após 3 segundos (simulando o carregamento)
+      loaderWrapper.style.display = "none";
+      // Ativa o scroll novamente
+      document.body.classList.remove('scroll-disabled');
+      // Exibe o conteúdo principal
+      content.style.display = "block";
+  }, 3000);
+});
+
+// Adicione essa função ao seu script JavaScript
+function enableScroll() {
+  document.body.classList.remove('scroll-disabled'); // Ativa a rolagem
+}

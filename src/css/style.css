@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("https://getwallpapers.com/wallpaper/full/4/b/1/388517.jpg");
+    background-image: url("/src/img/fundobody.jpg");
     background-size: cover;
     /* Ajustado para cobrir 100% da largura e altura */
     background-repeat: no-repeat;
