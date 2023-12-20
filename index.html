@@ -15,7 +15,10 @@
 </head>
 
 <body>
-    <h1 class="title">POKEDEX</h1>
+    <div class="title">
+        <img src="./src/img/teste3.png" alt="">
+    </div>
+
     <header>
         <div class="input-group div-search">
             <input class="form-control" id="pokemon" type="text" placeholder=" Digite o ID ou Nome do Pokémon " />
@@ -24,44 +27,45 @@
             </div>
         </div>
     </header>
-       <!-- Estrutura principal da página -->
-<main class="scroll-disabled">
-    <!-- Tela de Loading -->
-    <div class="loader-wrapper">
-        <div class="pokebola">
-            <div class="top"></div>
-            <div class="bottom"></div>
-            <div class="botao"></div>
-            <div class="botao-reflexo"></div>
-        </div>
-    </div>
-
-    <div id="pokemon-container">
-        <!-- Um contêiner principal para agrupar os elementos relacionados aos Pokémon -->
-
-        <div class="pokebola-center">
-            <div id="pokemon-list">
-                <!-- Uma área onde os cards dos Pokémon serão exibidos -->
+    <!-- Estrutura principal da página -->
+    <main class="scroll-disabled">
+        <!-- Tela de Loading -->
+        <div class="loader-wrapper">
+            <div class="pokebola">
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="botao"></div>
+                <div class="botao-reflexo"></div>
             </div>
         </div>
 
-        <button id="load-more">
-            <!-- Um botão para carregar mais Pokémon -->
-            <span class="pokeball-icon">
-                <!-- Um ícone de Pokébola para decorar o botão -->
-                <img src="./src/img/iconebotao.png" alt="Pokébola">
-            </span>
-            Capture mais Pokémons
-        </button>
-    </div>
+        <div id="pokemon-container">
+            <!-- Um contêiner principal para agrupar os elementos relacionados aos Pokémon -->
 
-    <section id="list-search"></section>
-</main>
+            <div class="pokebola-center">
+                <div id="pokemon-list">
+                    <!-- Uma área onde os cards dos Pokémon serão exibidos -->
+                </div>
+            </div>
 
-        <script src="src/js/script.js"></script> <!-- Link para o arquivo JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script> <!-- js bootstrap -->
+            <button id="load-more">
+                <!-- Um botão para carregar mais Pokémon -->
+                <span class="pokeball-icon">
+                    <!-- Um ícone de Pokébola para decorar o botão -->
+                    <img src="./src/img/iconebotao.png" alt="Pokébola">
+                </span>
+                Capture mais Pokémons
+            </button>
+        </div>
+
+        <section id="list-search"></section>
+    </main>
+
+    <script src="src/js/script.js"></script> <!-- Link para o arquivo JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script> <!-- js bootstrap -->
     </main>
 </body>
+
 </html>

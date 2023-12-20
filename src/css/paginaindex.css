@@ -24,6 +24,7 @@ dentro do contêiner */
   margin: 10px;
   width: 300px;
   height: 40vh;
+  min-height: 380px;
   background-color: whitesmoke;
   position: relative;
   overflow: hidden;
@@ -64,6 +65,12 @@ dentro do contêiner */
 .pokemon-name {
   position: relative;
   z-index: 2;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Estilizando a imagem do Pokémon dentro do card com efeito de zoom */
@@ -232,32 +239,28 @@ body {
 
 /*Titulo da página Pokedex*/
 .title {
-  background-color: black;
-  text-align: center;
-  color: red;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-/*Div que engloba o Input com o botão buscar*/
-.div-search {
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 /*Estlização do botão buscar*/
-.btn { 
-    color: red;
-    margin-right: 10vh;
-    width: 25vh;  
+.btn {
+  color: red;
+  margin-right: 10vh;
+  width: 25vh;
 }
 
 /*Estilização do campo Input*/
-input {
-  margin-right: 15vh;
-  margin-left: 10vh;
-}
 
 .form-control {
-  border-radius: 15px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 30vh;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 .loader-wrapper {
@@ -286,7 +289,8 @@ input {
   border-radius: 50%;
   box-shadow: inset -10px 10px 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: gira 3s linear infinite; /* Ajuste a velocidade e a duração conforme necessário */
+  animation: gira 3s linear infinite;
+  /* Ajuste a velocidade e a duração conforme necessário */
 }
 
 .pokebola:before,
@@ -334,15 +338,18 @@ input {
   border-radius: 50%;
   z-index: 10;
 }
+
 @keyframes gira {
   0% {
     transform: rotate(-400deg) scale(1);
     opacity: 1;
   }
+
   50% {
     transform: rotate(360deg) scale(0.8);
     opacity: 0.5;
   }
+
   100% {
     transform: rotate(720deg) scale(0);
     opacity: 0;
@@ -350,8 +357,9 @@ input {
 }
 
 .pokebola {
- animation: gira 2s ease-out forwards;
+  animation: gira 2s ease-out forwards;
 }
+
 /* Adicione um estilo para desabilitar a rolagem quando a classe 'scroll-disabled' estiver presente */
 .scroll-disabled {
   overflow: hidden;
