@@ -25,7 +25,9 @@ dentro do contêiner */
   width: 300px;
   height: 40vh;
   min-height: 380px;
-  background-color: whitesmoke;
+  background-image: url('/src/img/pokefundocard.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -124,93 +126,7 @@ dentro do contêiner */
   align-items: center;
 }
 
-/* Adicione outros estilos conforme necessário */
 
-/* Estilos para tipos de Pokémon específicos */
-.pokemon-card.type-fire {
-  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-fire-that-is-on-blue-and-orange-backgrounds-image_2938214.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pokemon-card.type-water {
-  background-image: url("https://png.pngtree.com/background/20210715/original/pngtree-water-blue-background-picture-image_1260480.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pokemon-card.type-grass {
-  background-image: url("https://img.freepik.com/vetores-premium/fundo-de-paisagem-de-floresta-encantada_1308-67879.jpg");
-}
-
-.pokemon-card.type-electric {
-  background-image: url("https://i.pinimg.com/236x/1b/00/c0/1b00c030cf2dbb8a84a5b6d0615066c6.jpg");
-}
-
-.pokemon-card.type-psychic {
-  background-image: url("https://1.bp.blogspot.com/-CUPfS9zcUd4/YFkuv73DqmI/AAAAAAAARoI/epjrslcw2D8vjAJh3YzOZ7YrNIfTmXd2ACLcBGAsYHQ/w1600/capa-ps%25C3%25ADquico.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pokemon-card.type-flying {
-  background-image: url("https://img.freepik.com/vetores-premium/ceu-azul-com-nuvens-fundo-elegante_778914-173.jpg");
-  background-position: center;
-  /* Centraliza a imagem de fundo */
-}
-
-.pokemon-card.type-fighting {
-  background-image: url("https://img.freepik.com/vetores-premium/fundo-de-desenho-animado-em-quadrinhos-versus-luta_530597-712.jpg")
-}
-
-.pokemon-card.type-poison {
-  background-image: url("/src/img/ie0pyp_baec903c0e74a345af260970dce01393b52aa462.jpg");
-}
-
-.pokemon-card.type-ground {
-  background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/24054400-terra-textura-solo-topo-visao-dentro-desenho-animado-estilo-com-pedras-e-textura-desatado-jogos-interface-fundo-castanho-terra-ilustracao-vetor.jpg");
-}
-
-.pokemon-card.type-rock {
-  background-image: url("https://img.freepik.com/vetores-gratis/uma-parede-de-pedra_1308-5911.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pokemon-card.type-ice {
-  background-image: url("https://img.freepik.com/vetores-gratis/fundo-do-inverno-com-uma-textura-de-gelo_1048-4071.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pokemon-card.type-bug {
-  background-image: url("https://deepdreamgenerator.com/storage/fast_queue/temp_images/cf01d53871c0b3aaf56e90788b51a89ea29d4127.jpg  ");
-}
-
-.pokemon-card.type-ghost {
-  background-image: url("https://st4.depositphotos.com/2617209/19791/v/450/depositphotos_197919700-stock-illustration-cartoon-halloween-happy-ghost-character.jpg");
-}
-
-.pokemon-card.type-steel {
-  background-image: url("https://img.freepik.com/vetores-premium/aco-fundo-de-vetor-de-ferro_42077-5013.jpg");
-
-}
-
-.pokemon-card.type-dragon {
-  background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/7743230-desenho-de-dragao-ocidental-com-asas-e-chifre-fundo-preto-arrastar-o-sol-no-fundo-vetor.jpg");
-}
-
-.pokemon-card.type-dark {
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20220915/pngtree-dark-horror-character-drawing-background-dark-photography-photo-image_48720244.jpg");
-}
-
-.pokemon-card.type-fairy {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxyC5rtYxWbf9WQ-rBWliVpqCoUSDlwnGOXQ&usqp=CAU");
-}
-
-.pokemon-card.type-normal {
-  background-image: url("/src/img/pokemonnormal.png");
-}
 
 /* Adicione mais classes e estilos conforme necessário */
 .pokeball-overlay {
