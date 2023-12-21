@@ -125,15 +125,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Simula um carregamento assíncrono, substitua isso pelo seu carregamento real de dados
   setTimeout(function () {
-      // Esconde a tela de loading após 3 segundos (simulando o carregamento)
-      loaderWrapper.style.display = "none";
-      // Ativa o scroll novamente
-      document.body.classList.remove('scroll-disabled');
-      // Exibe o conteúdo principal
-      content.style.display = "block";
+    // Esconde a tela de loading após 3 segundos (simulando o carregamento)
+    loaderWrapper.style.display = "none";
+    // Ativa o scroll novamente
+    document.body.classList.remove('scroll-disabled');
+    // Exibe o conteúdo principal
+    content.style.display = "block";
   }, 2000);
 });
 
 function enableScroll() {
   document.body.classList.remove('scroll-disabled'); // Ativa a rolagem
 }
+
+
+/* -----------Código feito em aula--------------- */
+
+// Função para buscar e exibir a lista de Pokémon
+async function fetchAndDisplayPokemonFiltered(searchInput) {
+  try {
+
+    // Faz uma solicitação para a API usando a URL
+    const response = await fetch(`${apiUrl}?limit=1180`);
+    const data = await response.json();
+    const pokemons = data.results
+
+    // Cria um array para armazenar os detalhes dos novos Pokémon
+    const newPokemonDetails = [];
+    let pokemonsFiltered;
+    if (typeof searchInput === "number") {
+      pokemonsFiltered = pokemons.filter((pokemon) => {
+        console.log("pokemon: ", pokemon);
+      })
+    } else {
+      pokemonsFiltered = pokemons.filter((pokemon) => {
+        return pokemon.name.includes(searchInput)
+      })
+
+    }
+
+    // Itera sobre os resultados da API e obtém os detalhes de cada Pokémon
+    for (const result of pokemonsFiltered) {
+      const pokemonDetailResponse = await fetch(result.url);
+      const pokemonDetail = await pokemonDetailResponse.json();
+      newPokemonDetails.push(pokemonDetail);
+    }
+
+    // Chama a função para exibir a lista de Pokémon
+    displayPokemonList(newPokemonDetails);
+  } catch (error) {
+    console.error("Erro ao buscar e exibir a lista de Pokémon:", error);
+  }
+}
+
+const btnSearchPokemon = document.getElementById("btnSearchPokemon");
+btnSearchPokemon.addEventListener("click", () => {
+  const inputSearch = document.getElementById("inputSearchPokemon").value.toLowerCase();
+  fetchAndDisplayPokemonFiltered(inputSearch)
+})

@@ -150,7 +150,7 @@ dentro do contêiner */
 
 /*Colocar a imagem de fundo na pagina toda*/
 body {
-  background-image: url("/src/img/fundobody2.jpg");
+  background-image: url("/src/img/background.gif");
 }
 
 /*Titulo da página Pokedex*/
