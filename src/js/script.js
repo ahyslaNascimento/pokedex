@@ -131,10 +131,9 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.remove('scroll-disabled');
       // Exibe o conteúdo principal
       content.style.display = "block";
-  }, 3000);
+  }, 2000);
 });
 
-// Adicione essa função ao seu script JavaScript
 function enableScroll() {
   document.body.classList.remove('scroll-disabled'); // Ativa a rolagem
 }

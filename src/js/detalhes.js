@@ -29,7 +29,7 @@ async function displayPokemonDetails() {
         console.log('Detalhes do Pokémon:', detailsData);
 
         document.getElementById('pokemon-name').textContent = detailsData.name;
-        document.getElementById('pokemon-image').src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
+        document.getElementById('pokemon-image').src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
         document.getElementById('pokemon-weight').textContent = ` ${detailsData.weight / 10}kg`;
         document.getElementById('pokemon-height').textContent = `${detailsData.height / 10}m`;
         document.getElementById('pokemon-strength').textContent = `${detailsData.base_experience}`;
