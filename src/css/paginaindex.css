@@ -1,3 +1,7 @@
+body {
+  background-image: url("/src/img/background.gif");
+}
+
 /* Estilizando o contêiner principal onde os cards dos Pokémon
 serão exibidos */
 #pokemon-list {
@@ -34,26 +38,13 @@ dentro do contêiner */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-position: center center;
-  /* Centraliza a imagem de fundo nos eixos X e Y */
+  background-position: center center; /* Centraliza a imagem de fundo nos eixos X e Y */
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 
-/* Efeito de vidro no fundo do card */
-.pokemon-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  backdrop-filter: blur(20px);
-  z-index: 1;
-  opacity: 0.7;
-}
 
 /* Efeito de zoom quando o mouse está sobre o card do Pokémon */
 .pokemon-card:hover {
@@ -73,6 +64,15 @@ dentro do contêiner */
   -webkit-backdrop-filter: blur(13.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer; /* Adiciona a mãozinha ao cursor */
+}
+
+.pokemon-name:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+  transform: scale(1.05);
+  color: white; /* Cor do brilho ao passar o mouse */
+  text-shadow: 0 0 10px #008000, 0 0 20px #03bcf4, 0 0 30px #0e3742; /* Adiciona o efeito neon ao texto */
 }
 
 /* Estilizando a imagem do Pokémon dentro do card com efeito de zoom */
@@ -111,12 +111,11 @@ dentro do contêiner */
   /* Centralizar na horizontal */
 }
 
+
 #load-more .pokeball-icon {
   width: 20px;
-  /* Ajuste a largura do ícone conforme necessário */
   height: auto;
-  margin-right: 30px;
-  /* Espaçamento entre o ícone e o texto */
+  margin-right: 30px; /* Espaçamento entre o ícone e o texto */
 }
 
 /* Centralizar o contêiner principal na página */
@@ -127,8 +126,6 @@ dentro do contêiner */
 }
 
 
-
-/* Adicione mais classes e estilos conforme necessário */
 .pokeball-overlay {
   width: 300px;
   height: 270px;
@@ -142,16 +139,11 @@ dentro do contêiner */
 }
 
 .pokeball-overlay img {
-  width: 60%;
-  /* Ajusta a largura da imagem para ocupar 100% do contêiner */
-  height: 60%;
-  /* Ajusta a altura da imagem para ocupar 100% do contêiner */
+  width: 60%; /* Ajusta a largura da imagem para ocupar 100% do contêiner */
+  height: 60%; /* Ajusta a altura da imagem para ocupar 100% do contêiner */
 }
 
-/*Colocar a imagem de fundo na pagina toda*/
-body {
-  background-image: url("/src/img/background.gif");
-}
+
 
 /*Titulo da página Pokedex*/
 .title {
@@ -205,8 +197,6 @@ body {
   border-radius: 50%;
   box-shadow: inset -10px 10px 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: gira 3s linear infinite;
-  /* Ajuste a velocidade e a duração conforme necessário */
 }
 
 .pokebola:before,
@@ -273,10 +263,10 @@ body {
 }
 
 .pokebola {
-  animation: gira 2s ease-out forwards;
+  animation: gira 3s ease-out forwards;
 }
 
-/* Adicione um estilo para desabilitar a rolagem quando a classe 'scroll-disabled' estiver presente */
+/* Adiciona um estilo para desabilitar a rolagem quando a classe 'scroll-disabled' estiver presente */
 .scroll-disabled {
   overflow: hidden;
 }

@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+    <!-- Definindo o conjunto de caracteres e a viewport para responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Links para folhas de estilo -->
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="shortcut icon" href="./src/favicons/Pokeball.ico" type="image/x-icon"> <!-- link Favicon -->
+    <link rel="shortcut icon" href="./src/favicons/Pokeball.ico" type="image/x-icon"> <!-- Link para o ícone da aba -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- link bootstrap -->
-    <link rel="stylesheet" href="src/css/paginaindex.css"> <!-- Link para o arquivo
-        de estilos CSS do index -->
+    <!-- Link para a biblioteca Bootstrap -->
+
+    <!-- Link para o arquivo de estilos específicos da página index -->
+    <link rel="stylesheet" href="src/css/paginaindex.css">
+    
+    <!-- Título da página -->
     <title>Pokédex</title>
 </head>
 
 <body>
+    <!-- Seção do título da página -->
     <div class="title">
-        <img src="./src/img/titulo.png" alt="">
+        <img src="./src/img/titulo.png" alt="Título da Pokédex">
     </div>
+
+    <!-- Cabeçalho da página -->
     <header>
+        <!-- Barra de busca -->
         <div class="input-group div-search">
             <input class="form-control" id="inputSearchPokemon" type="text" placeholder=" Digite o ID ou Nome do Pokémon " />
             <div class="input-group-btn">
@@ -26,10 +36,12 @@
             </div>
         </div>
     </header>
+
     <!-- Estrutura principal da página -->
     <main class="scroll-disabled">
         <!-- Tela de Loading -->
         <div class="loader-wrapper">
+            <!-- Pokebola animada indicando carregamento -->
             <div class="pokebola">
                 <div class="top"></div>
                 <div class="bottom"></div>
@@ -38,33 +50,33 @@
             </div>
         </div>
 
+        <!-- Contêiner principal para os Pokémon -->
         <div id="pokemon-container">
-            <!-- Um contêiner principal para agrupar os elementos relacionados aos Pokémon -->
-
+            <!-- Contêiner centralizado para os Pokémon -->
             <div class="pokebola-center">
-                <div id="pokemon-list">
-                    <!-- Uma área onde os cards dos Pokémon serão exibidos -->
-                </div>
+                <!-- Área onde os cards dos Pokémon serão exibidos -->
+                <div id="pokemon-list"></div>
             </div>
 
+            <!-- Botão para carregar mais Pokémon -->
             <button id="load-more">
-                <!-- Um botão para carregar mais Pokémon -->
                 <span class="pokeball-icon">
-                    <!-- Um ícone de Pokébola para decorar o botão -->
+                    <!-- Ícone de Pokébola decorativo no botão -->
                     <img src="./src/img/iconebotao.png" alt="Pokébola">
                 </span>
                 Capture mais Pokémons
             </button>
         </div>
 
+        <!-- Seção para exibir a lista de resultados da pesquisa -->
         <section id="list-search"></section>
     </main>
 
-    <script src="src/js/script.js"></script> <!-- Link para o arquivo JavaScript -->
+    <!-- Scripts JavaScript -->
+    <script src="src/js/script.js"></script> <!-- Link para o arquivo JavaScript da página -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script> <!-- js bootstrap -->
-    </main>
+        crossorigin="anonymous"></script> <!-- Link para o JavaScript da biblioteca Bootstrap -->
 </body>
 
 </html>

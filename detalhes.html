@@ -1,40 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+  <!-- Configuração da codificação de caracteres e viewport para responsividade -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Título da página e link para o ícone na aba do navegador -->
   <title>Detalhes do Pokémon</title>
   <link rel="shortcut icon" href="./src/favicons/Pokeball.ico" type="image/x-icon">
+
+  <!-- Importando estilos CSS específicos para a página de detalhes -->
   <link rel="stylesheet" href="src/css/style.css" />
   <link rel="stylesheet" href="src/css/detalhes.css" />
 </head>
 
 <body>
-  <!-- Estrutura principal do detalhes.html -->
+  <!-- Estrutura principal da página de detalhes -->
 
   <main id="detalhes-main">
+    <!-- Seção principal para os detalhes do Pokémon -->
     <section id="detalhes-container">
+      <!-- Container para o nome do Pokémon e link de voltar -->
       <div class="pokename-container">
-        <div class="voltar">
-          <a href="index.html">
-            < Voltar</a>
+        <div class="navigation-buttons">
+          <button id="prevButton">Anterior</button>
+          <button id="nextButton">Próximo</button>
         </div>
+        <div class="voltar">
+          <!-- Link para retornar à página principal -->
+          <a href="index.html">< Voltar</a>
+        </div>
+        <!-- Título do Pokémon -->
         <h2 id="pokemon-name"></h2>
         <div class="vazio"></div>
       </div>
-      <!-- Adicione o elemento para a imagem do Pokémon -->
+      
+      <!-- Container para a imagem do Pokémon -->
       <div class="pokeimage-container">
         <img id="pokemon-image" src="" alt="Imagem do Pokémon" />
       </div>
+      
+      <!-- Detalhes específicos do Pokémon -->
       <div id="pokemon-details">
+        <!-- Coluna de detalhes -->
         <div class="pokedetails-column">
           <p><strong>Peso:</strong> <span id="pokemon-weight">--</span></p>
           <p><strong>Altura:</strong> <span id="pokemon-height">--</span></p>
-           <p><strong>Força:</strong> <span id="pokemon-strength">--</span></p> 
+          <p><strong>Força:</strong> <span id="pokemon-strength">--</span></p> 
           <p><strong>Vida:</strong> <span id="pokemon-hp">--</span></p>
           <p><strong>Ataque:</strong> <span id="pokemon-attack">--</span></p>
         </div>
+        
+        <!-- Coluna de detalhes -->
         <div class="pokedetails-column">
           <p><strong>Defesa:</strong> <span id="pokemon-defense">--</span></p>
           <p>
@@ -46,11 +64,12 @@
             <span id="pokemon-special-defense">--</span>
           </p>
           <p><strong>Velocidade:</strong> <span id="pokemon-speed">--</span></p>
-          <!-- Adicione mais informações conforme necessário -->
         </div>
       </div>
     </section>
   </main>
+  
+  <!-- Inclusão do script JavaScript específico para a página de detalhes -->
   <script src="src/js/detalhes.js"></script>
 </body>
 

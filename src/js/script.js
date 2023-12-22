@@ -1,4 +1,3 @@
-
 // Definindo a URL da API para buscar os Pokémon
 const apiUrl = "https://pokeapi.co/api/v2/pokemon";
 
@@ -121,34 +120,32 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostra a tela de loading
   loaderWrapper.style.display = "block";
   // Desabilita o scroll enquanto a tela de loading estiver visível
-  document.body.classList.add('scroll-disabled');
+  document.body.classList.add("scroll-disabled");
 
   // Simula um carregamento assíncrono, substitua isso pelo seu carregamento real de dados
   setTimeout(function () {
     // Esconde a tela de loading após 3 segundos (simulando o carregamento)
     loaderWrapper.style.display = "none";
     // Ativa o scroll novamente
-    document.body.classList.remove('scroll-disabled');
+    document.body.classList.remove("scroll-disabled");
     // Exibe o conteúdo principal
     content.style.display = "block";
   }, 2000);
 });
 
 function enableScroll() {
-  document.body.classList.remove('scroll-disabled'); // Ativa a rolagem
+  document.body.classList.remove("scroll-disabled"); // Ativa a rolagem
 }
-
 
 /* -----------Código feito em aula--------------- */
 
 // Função para buscar e exibir a lista de Pokémon
 async function fetchAndDisplayPokemonFiltered(searchInput) {
   try {
-
     // Faz uma solicitação para a API usando a URL
     const response = await fetch(`${apiUrl}?limit=1180`);
     const data = await response.json();
-    const pokemons = data.results
+    const pokemons = data.results;
 
     // Cria um array para armazenar os detalhes dos novos Pokémon
     const newPokemonDetails = [];
@@ -156,12 +153,11 @@ async function fetchAndDisplayPokemonFiltered(searchInput) {
     if (typeof searchInput === "number") {
       pokemonsFiltered = pokemons.filter((pokemon) => {
         console.log("pokemon: ", pokemon);
-      })
+      });
     } else {
       pokemonsFiltered = pokemons.filter((pokemon) => {
-        return pokemon.name.includes(searchInput)
-      })
-
+        return pokemon.name.includes(searchInput);
+      });
     }
 
     // Itera sobre os resultados da API e obtém os detalhes de cada Pokémon
@@ -180,6 +176,8 @@ async function fetchAndDisplayPokemonFiltered(searchInput) {
 
 const btnSearchPokemon = document.getElementById("btnSearchPokemon");
 btnSearchPokemon.addEventListener("click", () => {
-  const inputSearch = document.getElementById("inputSearchPokemon").value.toLowerCase();
-  fetchAndDisplayPokemonFiltered(inputSearch)
-})
+  const inputSearch = document
+    .getElementById("inputSearchPokemon")
+    .value.toLowerCase();
+  fetchAndDisplayPokemonFiltered(inputSearch);
+});

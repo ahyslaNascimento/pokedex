@@ -1,18 +1,10 @@
+
 #detalhes-container {
     width: 100vw;
     height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
-
-    /*  max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; */
 }
 
 .pokename-container {
@@ -20,8 +12,6 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    /*  //justify-content: center;
-    //align-itens: center; */
 }
 
 .pokeimage-container {
@@ -87,7 +77,35 @@
 }
 
 
-@media (max-width: 600px) {
+
+
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    background-color: #e3350d;  /* Cor de fundo da pokebola */
+    color: #fff;  /* Cor do texto */
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10%;    
+  }
+
+
+  button:hover {
+    background-color: #c22100; 
+  }
+
+  @media (max-width: 600px) {
     .voltar {
         width: 33vw;
         font-size: 22px;
@@ -103,11 +121,30 @@
         color: white;
         text-transform: capitalize;
     }
-}
 
-/* .btn-details {
-    background-color: rgb(204, 24, 17);
-    font-size: 3vh;
-    width: 25vh;
-    color: black;
-} */
+    #pokemon-details {
+        margin-top: 20px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #pokemon-abilities,
+    #pokemon-types,
+    .pokedetails-column span {
+        font-size: 16px;
+    }
+
+    #pokemon-image {
+        height: 150px;
+    }
+}
