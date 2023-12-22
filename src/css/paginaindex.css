@@ -66,6 +66,7 @@ dentro do contêiner */
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer; /* Adiciona a mãozinha ao cursor */
+  text-transform: capitalize; 
 }
 
 .pokemon-name:hover {
