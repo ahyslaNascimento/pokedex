@@ -81,7 +81,7 @@ function createPokemonCard(pokemonData) {
     console.error("Dados inválidos do Pokémon:", pokemonData);
     return;
   }
-
+  
   // Cria um novo elemento div para representar o card do Pokémon
   const card = document.createElement("div");
   card.classList.add("pokemon-card");
@@ -107,6 +107,18 @@ function createPokemonCard(pokemonData) {
 
   // Adiciona o card ao contêiner principal
   pokemonContainer.appendChild(card);
+  // Adiciona os tipos dos Pokémon abaixo da imagem
+  const typesContainer = document.createElement("div");
+  typesContainer.classList.add("pokemon-types");
+  pokemonData.types.forEach((type) => {
+    const typeElement = document.createElement("span");
+    typeElement.classList.add(`type-${type.type.name}`);
+    typeElement.textContent = type.type.name;
+    typesContainer.appendChild(typeElement);
+  });
+
+  // Adiciona o container de tipos ao card
+  card.appendChild(typesContainer);
 }
 
 // Chama a função para buscar e exibir a lista de Pokémon quando a página carregar
