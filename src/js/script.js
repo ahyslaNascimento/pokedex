@@ -155,7 +155,7 @@ function enableScroll() {
 async function fetchAndDisplayPokemonFiltered(searchInput) {
   try {
     // Faz uma solicitação para a API usando a URL
-    const response = await fetch(`${apiUrl}?limit=1180`);
+    const response = await fetch(`${apiUrl}?limit=700`);
     const data = await response.json();
     const pokemons = data.results;
 
