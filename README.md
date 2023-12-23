@@ -14,12 +14,12 @@ Página inicial para listagem de pokémons.
 </p>
 
 <p align="center">
-  <img alt="Página inicial" src="./src/img/tela inicial.JPG" width="400px" />
+  <img alt="Página inicial" src="./doc/tela inicial.JPG" width="400px" />
 </p>
 
 
 <p align="center">
-  <img alt="Página inicial" src="./src/img/Tela detalhes.JPG" width="400px" />
+  <img alt="Página inicial" src="./doc/Tela detalhes.JPG" width="400px" />
 </p>
 
 ## 💻 Projeto
